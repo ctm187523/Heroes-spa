@@ -15,10 +15,9 @@ export const HeroList = ({ publisher }) => {
         <div className="row rows-cols-1 row-cols-md-3 g-3">
             {
                 heroes.map(hero => (
-
                     <HeroCard
                         key={hero.id}
-                        {...hero} //desestructuramos el hero conel spread(...) con todas sus propiedades para pasarselas como props al componente HeroCard.jsx
+                        {...hero} //desestructuramos el hero con el spread(...) con todas sus propiedades para pasarselas como props al componente HeroCard.jsx
                     />
                 ))
             }

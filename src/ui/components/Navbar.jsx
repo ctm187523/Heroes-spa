@@ -11,8 +11,8 @@ export const Navbar = () => {
     const onLogOut = () => {
         navigate('/login', { //le decimos que nos lleve a la pagina de login
             replace: true // el replace evita que el usuario pueda regresar al historial anterior porque lo estamos remplazando
-        }); 
-      
+        });
+
     }
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
@@ -43,12 +43,12 @@ export const Navbar = () => {
                     >
                         DC
                     </NavLink>
-                    {/* <NavLink
+                    <NavLink
                         className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                         to="/search"
                     >
                         Search
-                    </NavLink> */}
+                    </NavLink>
                 </div>
             </div>
 
@@ -61,7 +61,7 @@ export const Navbar = () => {
 
                     <button
                         className="nav-item nav-link btn"
-                        onClick={ onLogOut }
+                        onClick={onLogOut}
                     >
                         Logout
                     </button>
