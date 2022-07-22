@@ -1,7 +1,12 @@
+import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../auth/context/AuthContext';
 
 
 export const Navbar = () => {
+
+    //usamos el Hoook useContext para recibir la informacion comun de los componentes iniciadas en el AuthProvider.jsx
+    const { user } = useContext( AuthContext );
 
     //usamos el custom hook  no creado por React useNavigate pero incorporado en las librerias
     //para usuar sus metodos de navegacion
@@ -56,7 +61,9 @@ export const Navbar = () => {
                 <ul className="navbar-nav ml-auto">
 
                     <span className="nav-item nav-link text-primary">
-                        Climent
+                        {/* usamos la varaible user obtenida en la linea 9 
+                        le ponemos el signo de interrogacion para que si es nulo no de error*/}
+                        { user?.name }
                     </span>
 
                     <button
