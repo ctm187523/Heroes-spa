@@ -54,7 +54,7 @@ export const HeroCard = ({ id, superhero, publisher, alter_ego, first_appearance
                             </p>
 
                             {/* usamos Link de Router para hacer una navegacion ver HeroesRoutes.jsx*/}
-                            <Link to={`/Hero/${id}`}>
+                            <Link to={`/hero/${id}`}>
                                 Más...
                             </Link>
 

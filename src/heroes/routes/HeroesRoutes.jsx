@@ -16,13 +16,13 @@ export const HeroesRoutes = () => {
                     <Route path="dc" element={<DcPage />} />
                     <Route path="search" element={<SearchPage/>} />
                     {/* usamos con /: un comodin que le llamaremos id llamamos a esta
-                     ruta desde la linea 55 del componente HeroCard.jsx y le pasamos al componente HeroPage
+                     ruta desde la linea 57 del componente HeroCard.jsx y le pasamos al componente HeroPage
                      como param el id que contiene la informacion del HeroCard.jsx∫*/}
                     <Route path="hero/:id" element={<HeroPage/>} />
 
 
                     {/* si el path no coincide con ninguna nos lleva al redirect de /marvel */}
-                    <Route path="/" element={<Navigate to="/marvel" />} />
+                    <Route path="/*" element={<Navigate to="/marvel" />} />
                 </Routes>
 
             </div>

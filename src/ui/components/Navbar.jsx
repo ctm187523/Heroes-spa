@@ -6,14 +6,17 @@ import { AuthContext } from '../../auth/context/AuthContext';
 export const Navbar = () => {
 
     //usamos el Hoook useContext para recibir la informacion comun de los componentes iniciadas en el AuthProvider.jsx
-    const { user } = useContext( AuthContext );
+    const { user,logout } = useContext( AuthContext );
 
     //usamos el custom hook  no creado por React useNavigate pero incorporado en las librerias
     //para usuar sus metodos de navegacion
     const navigate = useNavigate();
 
-    //funcion para salir de la aplicacion, usamos el CustomHook declarado arriba linea 8
+    //funcion para salir de la aplicacion, usamos el CustomHook declarado arriba linea 13 useNavigate
     const onLogOut = () => {
+
+        logout(); //llamamos a la funcion logout obtenida del Hook useContext de la linea 9 donde recibe la informacion del contexto en el  AuthProvider.jsx
+
         navigate('/login', { //le decimos que nos lleve a la pagina de login
             replace: true // el replace evita que el usuario pueda regresar al historial anterior porque lo estamos remplazando
         });
@@ -61,7 +64,7 @@ export const Navbar = () => {
                 <ul className="navbar-nav ml-auto">
 
                     <span className="nav-item nav-link text-primary">
-                        {/* usamos la varaible user obtenida en la linea 9 
+                        {/* usamos la variable user obtenida en la linea 9 
                         le ponemos el signo de interrogacion para que si es nulo no de error*/}
                         { user?.name }
                     </span>
