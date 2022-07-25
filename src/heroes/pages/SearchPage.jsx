@@ -58,7 +58,8 @@ export const SearchPage = () => {
                 <div className="col-5">
                     <h4>Searching</h4>
                     <hr />
-                    <form onSubmit={onSearchSubmit}>
+                    {/* el aria-label="form" es para identificar el formulario al hacer las pruebas */}
+                    <form onSubmit={onSearchSubmit} aria-label="form">
                         <input
                             type="text"
                             placeholder="search a hero"
@@ -99,8 +100,9 @@ export const SearchPage = () => {
 
                     {/* ponemos el display en none para que se oculte el div y ademas no ocupe espacio en caso de cumplirse la condicion terciaria
                     si esta showErrror en true se muestra en caso contrario no se muestra añadimos tambien en el
-                    classname una animacion como la usada en HeroPage.jsx*/}
-                    <div className="alert alert-danger img-thumbnail animate__animated animate__fadeIn"
+                    classname una animacion como la usada en HeroPage.jsx
+                    ponemos aria-label="alert-danger" para identificar el div cuando hagamos las pruebas*/}
+                    <div aria-label="alert-danger" className="alert alert-danger img-thumbnail animate__animated animate__fadeIn"
                         style={{ display: showError ? '' : 'none' }}>
                         No hero with <b> {q} </b>
                     </div>

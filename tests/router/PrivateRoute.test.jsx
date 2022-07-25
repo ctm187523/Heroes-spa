@@ -31,6 +31,7 @@ describe('Pruebas en el PrivateRoute', () => {
         );
 
         expect(screen.getByText('Ruta privada')).toBeTruthy();
+        
         //comprobamos que el localstorage haya sido llamado
         expect( localStorage.setItem).toHaveBeenCalled();
         expect( localStorage.setItem).toHaveBeenCalledWith('lastPath', '/marvel');

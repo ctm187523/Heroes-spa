@@ -11,7 +11,7 @@ import { AuthContext } from "../auth/context/AuthContext"
 export const PrivateRoute = ({ children }) => {
 
     //usamos el hook useContext para recibir la informacion del AuthProvider.jsx, queremos saber
-    //si el usuario esta autenticado
+    //si el usuario esta autenticado, usamos la variable logged linea 14 AuthProvider.jsx
     const { logged } = useContext(AuthContext);
 
     //usamos el Hook useLocation de React para que cuando un usuario haga logout y vuelva a loggearse

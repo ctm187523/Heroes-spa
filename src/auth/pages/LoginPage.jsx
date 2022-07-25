@@ -7,9 +7,8 @@ export const LoginPage = () => {
     //para usar el context almacenado en el AuthProvider debemos usar el Hook
     //de React useContext, como parametro ponemos el AuthContext.jsx creado por nosotros
     //desestructuramos y obtenemos la funcion login que es uno de los elementos pasados en el value
+    
     const { login } = useContext(AuthContext)
-
-
 
     //usamos el custom hook  no creado por React useNavigate pero incorporado en las librerias
     //para usuar sus metodos de navegacion

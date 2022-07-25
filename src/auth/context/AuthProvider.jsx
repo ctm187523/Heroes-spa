@@ -11,7 +11,7 @@ const init = () =>{
 
     //si user regresa null quiere decir que no se ha logueado el usuario
     return{
-        logged: !!user, //si el user existe sera true si exite pasamos el user
+        logged: !!user, //si el user existe sera true si existe pasamos el user
         user: user,
     }
 }
